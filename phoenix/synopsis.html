@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Phoenix</title>
+   <link rel="stylesheet" href="../assets/templates/bootstrap.min.css">
+</head>
+<body>
+<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Phoenix: EECS349 Project</a>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      <li ><a href="about.html">About</a></li>
+      <li class="active"><a href="synopsis.html">Synopsis</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="report.html">Report</a></li>
+    </ul>
+
+
+  </div>
+</div>
+
+<div class="container">
+
+
+    <div class="page-header">
+
+<div class="row">
+    <div class="col-lg-8">
+        <h3>Synopsis</h3>
+        <p>In today's information age, we are all constantly barraged with content, from short tweets, to Buzzfeed-style listicles, longform journalism and other time consuming material. The rapid increase of the rate at which this content is generated makes it impossible for anyone to actually consume all the content published, and we as users must rely on recommendations to select how to spend our time when reading online. Through our work, we tried to predict whether a user would like an online article based on previous reading behavior.  Specifically, we wanted to predict whether a user would mark an article as a favorite or not.</p>
+        <p>By using scikit-learn's modeling tools we were able to benchmark the performance on the task with multiple classifying algorithms studied in class. We attempted to use perceptron, logistic regression, Naive Bayes, nearest neighbors, and SVC classifiers, among others. </p>
+        <p>For every algorithm, we performed dimensionality reduction to avoid overfitting by means of chi squared statistic testing. For each model, we selected the k-percentile features with the highest &#967;&sup2; significance. Our models were run for multiple values of k, and the various models' performance are shown in the figures 1 and 2, showing the change in performance as we increased the number of features included.</p>
+        <div class="well pull-right">
+            <img src="f1cv.png" width="400" >
+            <p style="width:400px">This figure gives a good preview of how different models performed our task while selecting different percentiles of the best features.</p>
+        </div>
+
+        <p>The models' validity was ensured by using 10-fold CV. There was a negative effect on the overall values of precision, accuracy and F1 scores, as the cross validated models avoid overfitting and theoretically should be more effective at predicting observations that deviate from the training data set. The performance of the cross validated models can be seen on figures 3 and 4.</p>
+
+
+        <h3>Key Results</h3>
+        <p>Our best model, a Multinomial Naive Bayes is in 25-30% F1-score range, and above 25% precision, clearly performing at a significant level above the baseline of 11%. Some words that ranked as good features were netflix, amazon, market, internet, labor, artificial, physics, dollar, bitcoin, paradox. We can see how the learner found words that are very relevant to our reading interests, such as technology, economics and startups. </p>
+
+
+        <p class="lead">Read the full report <a href="report.html">here.</a></p>
+    </div>
+
+
+
+</div>
+</div>
+</body>
+</html>
